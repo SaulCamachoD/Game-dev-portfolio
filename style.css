@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+html, body {
+    height: 100%;            /* ocupar toda la altura */
+    display: flex;
+    flex-direction: column;  /* organizar en columna */
+}
+
+main {
+    flex: 1;  /* el contenido crece y empuja el footer hacia abajo */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 800;
+    margin: 100px 0 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+body.dark-mode h3 {
+    color: #aaa;
+}
+
+p {
+    color: #444;
+    line-height: 1.6;
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+/* Botones generales */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #00bfff, #007BFF);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+a {
+  text-decoration: none; 
+}
+
+button a {
+  color: inherit; 
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Botón de toggle tema */
+.toggle-btn {
+    background: none;
+    border: 2px solid #00bfff;
+    color: #00bfff;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #00bfff;
+    color: white;
+}
+
+/* About */
+.about {
+    background-color: #fff;
+    padding: 60px 20px;
+    transition: background 0.3s;
+}
+
+body.dark-mode .about {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .social-links img {
+    filter: invert(1); 
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.about-img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  max-width: 1000px;  
+  margin: 0 auto;
+  gap: 30px;
+  padding: 40px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
+}
+
+body.dark-mode .project-card {
+    background: #1e1e1e;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.project-card h3 {
+  margin: 15px 0 10px;
+}
+
+.project-card p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+body.dark-mode .project-card p {
+    color: #ccc;
+}
+
+.project-card .btn {
+  display: inline-flex; 
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #00bfff, #007BFF);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 8px 5px 0; 
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.project-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+.project-card video {
+    width: 100%;
+    margin-top: 10px; 
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+
+footer {
+    margin-top: 70px;
+    padding: 20px;
+    background: #111;
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #00bfff;
+    margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+}
